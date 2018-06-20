@@ -9,19 +9,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "PMTs")
-@XmlType(propOrder = { "pmtsChannelList" })
-public class PMTs {
+@XmlRootElement(name = "EIT")
+@XmlType(propOrder = { "eitChannelList" })
+public class EIT {
 	
 	@XmlElement(name = "CHANNEL")
-	private List<PMTs_CHANNEL> pmtsChannelList;
+	private List<EIT_CHANNEL> eitChannelList;
 
-	public List<PMTs_CHANNEL> getPmtsChannelList() {
-		return pmtsChannelList;
+	public List<EIT_CHANNEL> getEitChannelList() {
+		return eitChannelList;
 	}
 
-	public void setPmtsChannelList(List<PMTs_CHANNEL> pmtsChannelList) {
-		this.pmtsChannelList = pmtsChannelList;
+	public void setEitChannelList(List<EIT_CHANNEL> eitChannelList) {
+		this.eitChannelList = eitChannelList;
 	}
-
+	
 }

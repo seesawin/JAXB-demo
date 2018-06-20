@@ -12,13 +12,16 @@ import javax.xml.bind.annotation.XmlType;
 // XML文件中的根标识
 @XmlRootElement(name = "MPEG-TABLES")
 // 控制JAXB 绑定类中属性和字段的排序
-@XmlType(propOrder = { "pmts" })
+@XmlType(propOrder = { "pmts", "eit" })
 public class MPEG_TABLES implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@XmlElement(name = "PMTs")
 	private PMTs pmts;
+
+	@XmlElement(name = "EIT")
+	private EIT eit;
 
 	public PMTs getPmts() {
 		return pmts;
@@ -27,4 +30,13 @@ public class MPEG_TABLES implements Serializable {
 	public void setPmts(PMTs pmts) {
 		this.pmts = pmts;
 	}
+
+	public EIT getEit() {
+		return eit;
+	}
+
+	public void setEit(EIT eit) {
+		this.eit = eit;
+	}
+
 }

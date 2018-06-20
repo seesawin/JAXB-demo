@@ -10,14 +10,14 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "CHANNEL")
-@XmlType(propOrder = { "serviceNumber", "elementaryStreamList" })
-public class CHANNEL {
+@XmlType(propOrder = { "serviceNumber", "pmtsChannelEementaryStreamList" })
+public class PMTs_CHANNEL {
 
 	@XmlElement(name = "SERVICE-NUMBER")
 	private String serviceNumber;
 
 	@XmlElement(name = "ELEMENTARY-STREAM")
-	private List<ELEMENTARY_STREAM> elementaryStreamList;
+	private List<PMTs_CHANNEL_ELEMENTARY_STREAM> pmtsChannelEementaryStreamList;
 
 	public String getServiceNumber() {
 		return serviceNumber;
@@ -27,11 +27,12 @@ public class CHANNEL {
 		this.serviceNumber = serviceNumber;
 	}
 
-	public List<ELEMENTARY_STREAM> getElementaryStreamList() {
-		return elementaryStreamList;
+	public List<PMTs_CHANNEL_ELEMENTARY_STREAM> getPmtsChannelEementaryStreamList() {
+		return pmtsChannelEementaryStreamList;
 	}
 
-	public void setElementaryStreamList(List<ELEMENTARY_STREAM> elementaryStreamList) {
-		this.elementaryStreamList = elementaryStreamList;
+	public void setPmtsChannelEementaryStreamList(List<PMTs_CHANNEL_ELEMENTARY_STREAM> pmtsChannelEementaryStreamList) {
+		this.pmtsChannelEementaryStreamList = pmtsChannelEementaryStreamList;
 	}
+	
 }

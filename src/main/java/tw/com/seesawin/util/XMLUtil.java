@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.StringReader;
 import java.io.StringWriter;
 
@@ -107,6 +108,22 @@ public class XMLUtil {
 				e.printStackTrace();
 			}
 			xmlObject = unmarshaller.unmarshal(fr);
+		} catch (JAXBException e) {
+			e.printStackTrace();
+		}
+		return xmlObject;
+	}
+	
+	@SuppressWarnings("unchecked")
+	/** 
+	 * 将file类型的xml转换成对象 
+	 */
+	public static Object convertXmlFileToObject(Class clazz, InputStream is) {
+		Object xmlObject = null;
+		try {
+			JAXBContext context = JAXBContext.newInstance(clazz);
+			Unmarshaller unmarshaller = context.createUnmarshaller();
+			xmlObject = unmarshaller.unmarshal(is);
 		} catch (JAXBException e) {
 			e.printStackTrace();
 		}

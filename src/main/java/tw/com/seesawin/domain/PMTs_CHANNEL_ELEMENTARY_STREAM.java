@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "ELEMENTARY-STREAM")
 @XmlType(propOrder = { "audioLanguage" })
-public class ELEMENTARY_STREAM {
+public class PMTs_CHANNEL_ELEMENTARY_STREAM {
 	
 	@XmlElement(name = "AUDIO-LANGUAGE")
 	private String audioLanguage;
