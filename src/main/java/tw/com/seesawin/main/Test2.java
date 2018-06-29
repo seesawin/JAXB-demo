@@ -46,10 +46,11 @@ public class Test2 {
 			List<EIT_CHANNEL_EVENT> eitChannelEventList2 = ec.getEitChannelEventList();
 			for (EIT_CHANNEL_EVENT event : eitChannelEventList2) {
 				logger.info("NAME : " + event.getName());
+				logger.info("START-UTC-DATE : " + event.getStartUtcDate());
 
 				List<EIT_CHANNEL_EVENT_DESCRIPTOR> descrptorList = event.getEitChannelEventDescriptor();
 				for (EIT_CHANNEL_EVENT_DESCRIPTOR d : descrptorList) {
-					// logger.info("DATA : " + d.getData());
+					logger.info("DATA : " + d.getData());
 				}
 			}
 		}
