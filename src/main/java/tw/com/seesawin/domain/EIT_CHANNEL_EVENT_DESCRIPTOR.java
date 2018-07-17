@@ -5,6 +5,9 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+import tw.com.seesawin.util.HexConvter;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "DESCRIPTOR")
@@ -12,6 +15,7 @@ import javax.xml.bind.annotation.XmlType;
 public class EIT_CHANNEL_EVENT_DESCRIPTOR {
 
 	@XmlElement(name = "DATA")
+	@XmlJavaTypeAdapter(value=HexConvter.class)
 	private String data;
 
 	public String getData() {
